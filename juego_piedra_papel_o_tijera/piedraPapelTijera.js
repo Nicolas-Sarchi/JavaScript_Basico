@@ -1,41 +1,43 @@
 let eleccionPc = Math.floor(Math.random() * 3) + 1;
-let nombreUsuario = prompt("Ingrese su nombre de jugador: ")
-let eleccionUser = prompt("1. piedra     2. papel    3.tijera");
+var nombreUsuario = prompt("Ingrese su nombre de jugador: ")
+let eleccionUser = parseInt(prompt("1. piedra     2. papel    3.tijera"));
+var jugada = ""
 
-eleccionPc = parseInt(eleccionPc);
+function verificarGanador (eleccionPc, eleccionUser){
+    if (eleccionPc === eleccionUser) {
+        alert(`EMPATE`)
 
-eleccionUser = parseInt(eleccionUser);
+    }
+
+    else if ((eleccionUser == 1 && eleccionPc == 3) || (eleccionUser == 2 && eleccionPc == 1) || (eleccionUser == 3 && eleccionPc == 2)) {
+        alert(`Ganaste`)
 
 
-if (eleccionPc == 1 && eleccionUser == 2){
-    alert(`PC elije: Piedra`)
-    alert(`${nombreUsuario} elije: Papel`)
-    alert(`${nombreUsuario} Gana`)
-
-
+    }
+    else {
+        alert ("PC Gana ");
+    }
 }
 
-
-else if (eleccionPc == 3 && eleccionUser == 2 )  {
-    alert(`PC elije: Tijera`)
-    alert(`${nombreUsuario} elije: Papel`)
-    alert(`PC gana`)
-
+function eleccion (eleccion) {
+    if (eleccion == 1){
+        jugada = "piedra"
+    }
+    else if (eleccion == 2){
+        jugada = "papel"
+    }
+    else if (eleccion == 3){
+        jugada = "tijera"
+    }
+    return jugada
 }
 
-else if (eleccionPc == 2 && eleccionUser == 2 )  {
-    alert(`PC elije: Papel`)
-    alert(`${nombreUsuario} elije: Papel`)
-    alert(`Empate`)
+alert(`PC elige ${eleccion(eleccionPc)}`)
+alert(`${nombreUsuario} elige ${eleccion(eleccionUser)}`)
 
-}
+verificarGanador(eleccionPc,eleccionUser);
 
-else if (eleccionPc == 2 && eleccionUser == 2 )  {
-    alert(`PC elije: Papel`)
-    alert(`${nombreUsuario} elije: Papel`)
-    alert(`Empate`)
 
-}
 
 
 
