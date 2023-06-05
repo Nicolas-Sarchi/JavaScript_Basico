@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>to do list</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="http://illiweb.com/fa/favicon/discussion.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #202020;">
+<h1>To do List</h1>
+<form class="row g-3 needs-validation"  id="formulario">
+  <div class="col-md-4">
+    <label for="nombre" class="form-label">Nombre de la tarea</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" required>
+  </div>
+  <div class="col-md-4">
+    <label for="descripcion" class="form-label">descripcion</label>
+    <input type="text" class="form-control" id="descripcion" name="descripcion" >
+    
+  </div>
+  <div class="col-4">
+    <button class="btn btn-primary" type="submit">Agregar</button>
+  </div>
+</form>
+
+
+<div class="tarjetas" id="areaTarjetas">
+
+</div>
+
+
+
+
+<script src="listaTareas.js"></script>
+</body>
+</html>
